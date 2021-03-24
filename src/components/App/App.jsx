@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     auth &&
       auth.onAuthStateChanged((userAuth) => {
-        console.log(userAuth);
         setUser(userAuth);
         setDisplaySignUp(false);
         setDisplayPasswordReset(false);
@@ -33,7 +32,6 @@ function App() {
       .onSnapshot((Snapshot) => {
         let todos = [];
         Snapshot.docs.map((doc) => {
-          console.log(Snapshot);
           let data = { ...doc.data(), id: doc.id };
           todos.push(data);
         });

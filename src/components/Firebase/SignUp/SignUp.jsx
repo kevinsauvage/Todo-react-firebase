@@ -61,7 +61,6 @@ const SignUp = ({ handleClickSignIn }) => {
                 name="displayName"
                 value={displayName}
                 placeholder="E.g: Faruq"
-                id="displayName"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
@@ -74,7 +73,6 @@ const SignUp = ({ handleClickSignIn }) => {
                 name="userEmail"
                 value={email}
                 placeholder="E.g: faruq123@gmail.com"
-                id="userEmail"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
@@ -87,7 +85,6 @@ const SignUp = ({ handleClickSignIn }) => {
                 name="userPassword"
                 value={password}
                 placeholder="Your Password"
-                id="userPassword"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>

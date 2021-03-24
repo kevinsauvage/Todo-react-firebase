@@ -39,6 +39,7 @@ const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
                 value={email}
                 placeholder="E.g: faruq123@gmail.com"
                 id="userEmail"
+                autoComplete="username"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
@@ -50,6 +51,7 @@ const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
                 value={password}
                 placeholder="Your Password"
                 id="userPassword"
+                autoComplete="current-password"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>

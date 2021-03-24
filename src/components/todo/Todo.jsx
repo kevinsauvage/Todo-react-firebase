@@ -4,7 +4,6 @@ import { firestore } from "../../firebase";
 import { MdClear, MdDeleteForever, MdDone } from "react-icons/md";
 
 const Todo = ({ text, completed, id, timestamp, user }) => {
-  console.log(id, timestamp);
   const handleDelete = () => {
     const db = firestore.collection("users").doc(user?.uid);
 
