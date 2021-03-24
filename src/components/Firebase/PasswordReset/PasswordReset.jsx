@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { auth } from "../../../firebase";
+import SignBtn from "../SignBtn/SignBtn";
 
 const PasswordReset = ({ handleClickSignIn }) => {
   const [email, setEmail] = useState("");
@@ -50,15 +51,17 @@ const PasswordReset = ({ handleClickSignIn }) => {
                 onChange={onChangeHandler}
               />
             </div>
-            <button className="reset__btn reset--btn" onClick={sendResetEmail}>
-              Send me a reset link
-            </button>
+            <SignBtn
+              className="reset__btn reset--btn"
+              onClick={sendResetEmail}
+              text="Send me a reset link"
+            />
           </form>
-          <button
+          <SignBtn
             className="reset__btn signIn--btn"
-            onClick={handleClickSignIn}>
-            back to sign in page
-          </button>
+            onClick={handleClickSignIn}
+            text="back to sign in page"
+          />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { auth } from "../../../firebase";
-import "./SignIn.css";
+import SignBtn from "../SignBtn/SignBtn";
 
 const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
   const [email, setEmail] = useState("");
@@ -53,26 +53,26 @@ const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
-            <button
+            <SignBtn
               className="signIn__Btn signIn--btn"
               onClick={(event) => {
                 signInWithEmailAndPasswordHandler(event, email, password);
-              }}>
-              Sign in
-            </button>
+              }}
+              text="Sign In"
+            />
           </form>
           <p>
-            <button
+            <SignBtn
               className="signIn__Btn signUp--btn"
-              onClick={handleClickSignUp}>
-              Sign up here
-            </button>
+              onClick={handleClickSignUp}
+              text="Sign up here"
+            />
             <br />
-            <button
+            <SignBtn
               className="signIn__Btn signOut--btn"
-              onClick={handleClickForgotPassword}>
-              Forgot Password?
-            </button>
+              onClick={handleClickForgotPassword}
+              text="Forgot Password?"
+            />
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { auth, firestore } from "../../../firebase";
+import SignBtn from "../SignBtn/SignBtn";
 
 const SignUp = ({ handleClickSignIn }) => {
   const [email, setEmail] = useState("");
@@ -90,20 +91,19 @@ const SignUp = ({ handleClickSignIn }) => {
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
-
-            <button
+            <SignBtn
               className="signUp__Btn signUp--btn"
               onClick={(event) => {
                 createUserWithEmailAndPasswordHandler(event, email, password);
-              }}>
-              Sign up
-            </button>
+              }}
+              text="Sign up"
+            />
           </form>
-          <button
+          <SignBtn
             className="signIn__Btn signIn--btn"
-            onClick={handleClickSignIn}>
-            Sign in here
-          </button>
+            onClick={handleClickSignIn}
+            text="Sign in here"
+          />
         </div>
       </div>
     </div>
