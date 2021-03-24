@@ -1,10 +1,13 @@
 import React from "react";
 import "./Todo.css";
-import { db } from "../../firebase";
+import { firestore } from "../../firebase";
 import { MdClear, MdDeleteForever, MdDone } from "react-icons/md";
 
-const Todo = ({ text, completed, id, timestamp }) => {
+const Todo = ({ text, completed, id, timestamp, user }) => {
+  console.log(id, timestamp);
   const handleDelete = () => {
+    const db = firestore.collection("users").doc(user?.uid);
+
     db.collection("todos")
       .doc(id)
       .delete()
@@ -17,6 +20,7 @@ const Todo = ({ text, completed, id, timestamp }) => {
   };
 
   const handleCompleted = () => {
+    const db = firestore.collection("users").doc(user?.uid);
     db.collection("todos").doc(id).update({
       todo: text,
       completed: !completed,

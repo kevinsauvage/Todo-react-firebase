@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/auth";
 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyAQCFT-oH8FcqtfGx8E0jM7-b8hqNMzLus",
@@ -10,6 +11,7 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-FDTFK66GGF",
 });
 
-const db = firebaseApp.firestore();
+const firestore = firebaseApp.firestore();
+const auth = firebase.auth();
 
-export { db };
+export { firestore, auth };

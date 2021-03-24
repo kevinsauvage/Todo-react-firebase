@@ -13,7 +13,6 @@
 header {
   background-color: #7646FF;
   padding: 1rem;
-  max-width: 375px;
   width: 100%;
   display: flex;
   flex-direction: column;
