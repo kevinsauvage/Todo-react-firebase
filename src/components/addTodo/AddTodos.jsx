@@ -1,11 +1,12 @@
-import React from "react";
 import "./AddTodos.css";
+
 const AddTodos = ({ handleInputChange, handleAddTodo, inputTodo }) => {
   return (
     <form className="addTodo">
       <input
         className="addTodo__input"
         value={inputTodo}
+        placeholder="Add todo"
         onChange={handleInputChange}
       />
       <button

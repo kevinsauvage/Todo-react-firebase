@@ -1,4 +1,3 @@
-import React from "react";
 import "./Todo.css";
 import { firestore } from "../../firebase";
 import { MdClear, MdDeleteForever, MdDone } from "react-icons/md";

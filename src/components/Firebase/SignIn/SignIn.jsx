@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth } from "../../../firebase";
 import SignBtn from "../SignBtn/SignBtn";
+import "../SignStyle.css";
 
 const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
   const [email, setEmail] = useState("");
