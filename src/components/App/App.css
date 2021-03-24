@@ -6,6 +6,20 @@
   height: 100vh;
   
 }
+.App__userInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.App__userInfo p {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.App__userInfo p:nth-child(2) {
+  cursor: pointer;
+}
+
 .App__title {
   text-align: center;
   color: whitesmoke;

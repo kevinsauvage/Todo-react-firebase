@@ -94,8 +94,8 @@ function App() {
   return user ? (
     <div className="App">
       <header>
-        <div>
-          <p>{}</p>
+        <div className="App__userInfo">
+          <p>{user?.displayName || user?.email}</p>
           <p onClick={handleSignOutUser}>Sign out</p>
         </div>
         <h1 className="App__title">Todo app</h1>

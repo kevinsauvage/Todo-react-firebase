@@ -32,7 +32,10 @@ const Todo = ({ text, completed, id, timestamp, user }) => {
     <div
       onClick={handleCompleted}
       className="todo"
-      style={{ borderLeft: completed ? "2px solid green" : "2px solid red" }}>
+      style={{
+        borderLeft: completed ? "2px solid green" : "2px solid red",
+        backgroundColor: completed ? "#9ddfd3" : "#ffc93c",
+      }}>
       <div className="todo__wrapper">
         {completed ? (
           <MdDone color="green" size={20} />
@@ -42,7 +45,11 @@ const Todo = ({ text, completed, id, timestamp, user }) => {
         <li className="todo__item">{text}</li>
       </div>
       <div className="todo__btn">
-        <MdDeleteForever size={20} onClick={handleDelete} />
+        <MdDeleteForever
+          size={20}
+          color={completed ? "green" : "red"}
+          onClick={handleDelete}
+        />
       </div>
     </div>
   );
