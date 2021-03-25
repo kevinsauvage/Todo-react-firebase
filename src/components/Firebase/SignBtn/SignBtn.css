@@ -20,12 +20,14 @@
 }
 
 .signOut--btn {
-  background-color: rgb(224, 206, 38);
+  background-color: rgb(224, 122, 38);
 }
 
 .signIn--btn,
 .signUp--btn,
-.signOut--btn {
+.signOut--btn,
+.reset--btn {
+
   border: 2px solid white;
   color: white;
   border-radius: 5px;

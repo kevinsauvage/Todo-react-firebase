@@ -6,7 +6,10 @@
   align-items: center;
   padding: 0 5px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid rgba(255,
+255,
+255,
+0.575);
 }
 
 .todo__wrapper {
@@ -22,6 +25,7 @@
   list-style: none;
   text-transform: capitalize;
   max-width: 87%;
+  color: white;
 }
 
 .todo__btn {

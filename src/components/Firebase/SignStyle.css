@@ -4,29 +4,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+
 }
 
 .signIn__title,
 .singUp__title,
 .reset__title {
   text-align: center;
-  color: white;
   margin-bottom: 1rem;
 }
 
 .signIn__wrapper,
 .signUp__wrapper,
 .reset__wrapper {
-  width: 50vh;
+  width: 60vh;
 }
 
 .signIn__fromWrapper,
 .signUp__fromWrapper,
 .reset__formWrapper {
-  background-color: rgb(124, 124, 255);
-  min-height: 50vh;
+  background-color: #242430;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
