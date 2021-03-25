@@ -1,5 +1,5 @@
 .todo {
-  height: 40px;
+  min-height: 40px;
   margin: 5px 0;
   display: flex;
   justify-content: space-between;
@@ -8,21 +8,27 @@
   border-radius: 5px;
   border: 1px solid gray;
 }
+
 .todo__wrapper {
   display: flex;
   align-items: center;
 }
+
 .todo__wrapper svg {
   margin-right: 5px;
 }
+
 .todo__item {
   list-style: none;
   text-transform: capitalize;
+  max-width: 87%;
 }
+
 .todo__btn {
   display: flex;
   align-items: center;
 }
+
 .todo__btn svg:first-child {
   margin-right: 5px;
 }

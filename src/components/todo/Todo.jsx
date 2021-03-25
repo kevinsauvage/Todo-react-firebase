@@ -1,30 +1,15 @@
 import "./Todo.css";
-import { firestore } from "../../firebase";
 import { MdClear, MdDeleteForever, MdDone } from "react-icons/md";
+import TodoLogic from "./TodoLogic";
 
 const Todo = ({ text, completed, id, timestamp, user }) => {
-  const handleDelete = () => {
-    const db = firestore.collection("users").doc(user?.uid);
-
-    db.collection("todos")
-      .doc(id)
-      .delete()
-      .then(() => {
-        console.log("Document successfully deleted!");
-      })
-      .catch((error) => {
-        console.error("Error removing document: ", error);
-      });
-  };
-
-  const handleCompleted = () => {
-    const db = firestore.collection("users").doc(user?.uid);
-    db.collection("todos").doc(id).update({
-      todo: text,
-      completed: !completed,
-      timestamp: timestamp,
-    });
-  };
+  const { handleDelete, handleCompleted } = TodoLogic(
+    text,
+    completed,
+    id,
+    timestamp,
+    user
+  );
 
   return (
     <div

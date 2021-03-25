@@ -1,29 +1,15 @@
-import { useState } from "react";
-import { auth } from "../../../firebase";
 import SignBtn from "../SignBtn/SignBtn";
+import PasswordResetLogic from "./PasswordResetLogic";
 
 const PasswordReset = ({ handleClickSignIn }) => {
-  const [email, setEmail] = useState("");
-  const [emailHasBeenSent, setEmailHasBeenSent] = useState(false);
-  const [error, setError] = useState(null);
+  const {
+    emailHasBeenSent,
+    error,
+    email,
+    onChangeHandler,
+    sendResetEmail,
+  } = PasswordResetLogic();
 
-  const onChangeHandler = (event) => {
-    const { name, value } = event.currentTarget;
-    if (name === "userEmail") {
-      setEmail(value);
-    }
-  };
-  const sendResetEmail = (event) => {
-    event.preventDefault();
-    auth
-      .sendPasswordResetEmail(email)
-      .then(function () {
-        setEmailHasBeenSent(true);
-      })
-      .catch(function (error) {
-        setError(error);
-      });
-  };
   return (
     <div className="reset">
       <div className="reset__wrapper">
