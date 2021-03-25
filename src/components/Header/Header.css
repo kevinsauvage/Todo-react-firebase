@@ -1,0 +1,36 @@
+header {
+  background-color: #1D1D26;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(1rem - 5px);
+}
+
+.header__userInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+
+.header__userInfo p {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.header__title {
+  text-align: center;
+  color: whitesmoke;
+  margin-right: 1rem;
+}
+
+.header__btns {
+  display: flex;
+}
+
+.header__btns button:first-child {
+  margin-right: 1rem;
+}

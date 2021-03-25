@@ -6,9 +6,10 @@ const AppLogic = () => {
   const [inputTodo, setInputTodo] = useState("");
   const [todos, setTodos] = useState([]);
   const [user, setUser] = useState(null);
-  const [displaySignIn, setDisplaySignIn] = useState(true);
+  const [displaySignIn, setDisplaySignIn] = useState(false);
   const [displaySignUp, setDisplaySignUp] = useState(false);
   const [displayPasswordReset, setDisplayPasswordReset] = useState(false);
+  const [displayLanding, setDisplayLanding] = useState(true);
 
   useEffect(() => {
     auth &&
@@ -63,12 +64,15 @@ const AppLogic = () => {
 
   const handleClickSignUp = () => {
     setDisplaySignIn(false);
+    setDisplayLanding(false);
     setDisplayPasswordReset(false);
     setDisplaySignUp(true);
   };
+
   const handleClickSignIn = () => {
     setDisplayPasswordReset(false);
     setDisplaySignUp(false);
+    setDisplayLanding(false);
     setDisplaySignIn(true);
   };
 
@@ -79,10 +83,15 @@ const AppLogic = () => {
   };
 
   const handleSignOutUser = () => {
+    setDisplaySignIn(false);
+    setDisplaySignUp(false);
+    setDisplayPasswordReset(false);
+    setDisplayLanding(true);
     auth.signOut().catch((error) => {
       alert(error);
     });
   };
+
   return {
     user,
     handleSignOutUser,
@@ -96,6 +105,7 @@ const AppLogic = () => {
     displaySignUp,
     handleClickSignIn,
     displayPasswordReset,
+    displayLanding,
   };
 };
 

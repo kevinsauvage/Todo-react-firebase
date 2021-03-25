@@ -2,21 +2,34 @@
 .signUp__Btn,
 .reset__btn {
   width: 100%;
-  height: 35px;
   margin: 5px 0;
   border-radius: 5px;
   border: none;
+  padding: 10px 15px;
+
+
 }
 
 .signIn--btn {
-  background-color: #9ddfd3;
+  background-color: #178873;
 }
 
 .signUp--btn,
 .reset--btn {
-  background-color: #ffc93c;
+  background-color: rgba(244, 56, 98, 1);
 }
 
 .signOut--btn {
-  background-color: #f06565;
+  background-color: rgb(224, 206, 38);
+}
+
+.signIn--btn,
+.signUp--btn,
+.signOut--btn {
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
 }

@@ -5,6 +5,8 @@ import SignIn from "../Firebase/SignIn/SignIn";
 import SignUp from "../Firebase/SignUp/SignUp";
 import PasswordReset from "../Firebase/PasswordReset/PasswordReset";
 import AppLogic from "./AppLogic";
+import Header from "../Header/Header";
+import Landing from "../Landing/Landing";
 
 function App() {
   const {
@@ -20,34 +22,41 @@ function App() {
     displaySignUp,
     handleClickSignIn,
     displayPasswordReset,
+    displayLanding,
   } = AppLogic();
 
-  return user ? (
+  return (
     <div className="App">
-      <header>
-        <div className="App__userInfo">
-          <p>{user?.displayName || user?.email}</p>
-          <p onClick={handleSignOutUser}>Sign out</p>
-        </div>
-        <h1 className="App__title">Todo app</h1>
-        <AddTodos
-          handleAddTodo={handleAddTodo}
-          handleInputChange={handleInputChange}
-          inputTodo={inputTodo}
+      <Header
+        user={user}
+        handleClickSignIn={handleClickSignIn}
+        handleClickSignUp={handleClickSignUp}
+        handleSignOutUser={handleSignOutUser}
+      />
+      {displayLanding ? (
+        <Landing handleClickSignUp={handleClickSignUp} />
+      ) : user ? (
+        <>
+          <AddTodos
+            handleAddTodo={handleAddTodo}
+            handleInputChange={handleInputChange}
+            inputTodo={inputTodo}
+          />
+
+          <TodosList todos={todos} user={user} />
+        </>
+      ) : displaySignIn ? (
+        <SignIn
+          handleClickSignUp={handleClickSignUp}
+          handleClickForgotPassword={handleClickForgotPassword}
         />
-      </header>
-      <TodosList todos={todos} user={user} />
+      ) : displaySignUp ? (
+        <SignUp handleClickSignIn={handleClickSignIn} />
+      ) : displayPasswordReset ? (
+        <PasswordReset handleClickSignIn={handleClickSignIn} />
+      ) : null}
     </div>
-  ) : displaySignIn ? (
-    <SignIn
-      handleClickSignUp={handleClickSignUp}
-      handleClickForgotPassword={handleClickForgotPassword}
-    />
-  ) : displaySignUp ? (
-    <SignUp handleClickSignIn={handleClickSignIn} />
-  ) : displayPasswordReset ? (
-    <PasswordReset handleClickSignIn={handleClickSignIn} />
-  ) : null;
+  );
 }
 
 export default App;

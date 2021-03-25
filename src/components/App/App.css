@@ -2,40 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #EBDDF2;
+  background-color: #1D1D26;
   min-height: 100vh;
   height: 100%;
   padding-bottom: 1rem;
-}
-
-.App__userInfo {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.App__userInfo p {
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-}
-
-.App__userInfo p:nth-child(2) {
-  cursor: pointer;
-}
-
-.App__title {
-  text-align: center;
-  color: whitesmoke;
-}
-
-header {
-  background-color: #7646FF;
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: calc(1rem - 5px);
+  padding: 1rem 5rem;
 }

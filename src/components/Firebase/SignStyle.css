@@ -1,8 +1,6 @@
 .signIn,
 .signUp,
 .reset {
-  background-color: rgb(0, 0, 41);
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
