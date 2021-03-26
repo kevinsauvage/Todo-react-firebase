@@ -7,9 +7,13 @@
   padding: 0 5px;
   border-radius: 5px;
   border: 1px solid rgba(255,
-255,
-255,
-0.575);
+      255,
+      255,
+      0.575);
+  animation-name: grow;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
 }
 
 .todo__wrapper {
@@ -35,4 +39,16 @@
 
 .todo__btn svg:first-child {
   margin-right: 5px;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

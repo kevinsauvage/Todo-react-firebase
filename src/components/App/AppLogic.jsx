@@ -41,7 +41,6 @@ const AppLogic = () => {
   const handleAddTodo = (e) => {
     e.preventDefault();
     if (inputTodo === "") return;
-    setTodos([...todos, { todo: inputTodo, completed: false }]);
     addToDatabase();
     setInputTodo("");
   };
