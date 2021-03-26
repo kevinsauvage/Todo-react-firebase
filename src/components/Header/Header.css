@@ -6,6 +6,7 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: calc(1rem - 5px);
+  max-width: 1000px;
 }
 
 .header__userInfo {
@@ -15,7 +16,7 @@ header {
   width: fit-content;
 }
 
-.header__userInfo p {
+.header__name {
   font-size: 14px;
   font-weight: 600;
   color: white;
@@ -33,4 +34,24 @@ header {
 
 .header__btns button:first-child {
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .header__btns button {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .header__title {
+    font-size: 19px;
+    padding-right: 0.5rem;
+  }
+
+  .header__name {
+    font-size: 11px;
+  }
+
+  .header__userInfo {
+    display: block
+  }
 }

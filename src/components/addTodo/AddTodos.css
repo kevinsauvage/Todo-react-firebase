@@ -1,17 +1,23 @@
 .addTodo {
+  text-align: center;
   margin-top: 1rem;
+  width: 100%;
 }
+
 .addTodo__input {
   height: 40px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   border-radius: 5px 0 0 5px;
   border: none;
   padding-left: 1rem;
-  
+
 }
+
 .addTodo__input:focus {
   outline: none;
 }
+
 .addTodo__btn {
   border-radius: 0 5px 5px 0;
   width: 50px;

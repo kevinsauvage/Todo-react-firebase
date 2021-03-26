@@ -19,9 +19,6 @@ const Todo = ({ text, completed, id, timestamp, user }) => {
         borderLeft: completed
           ? "2px solid rgba(23, 136, 115, 1)"
           : "2px solid rgba(244, 56, 98, 1)",
-        backgroundColor: completed
-          ? "rgba(23, 136, 115, 0.2)"
-          : "rgba(244, 56, 98, 0.2)",
       }}>
       <div className="todo__wrapper">
         {completed ? (

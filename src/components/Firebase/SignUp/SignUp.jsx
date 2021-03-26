@@ -49,6 +49,7 @@ const SignUp = ({ handleClickSignIn }) => {
                 type="password"
                 name="userPassword"
                 value={password}
+                autoComplete="current-password"
                 placeholder="Your Password"
                 onChange={(event) => onChangeHandler(event)}
               />

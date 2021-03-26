@@ -52,29 +52,8 @@
   top: 300px;
 }
 
-.landing__pinkBubble3 {
-  width: 80px;
-  height: 80px;
-  background-color: rgba(244, 56, 98, 1);
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 203, 50, 1) 0%, rgba(244, 56, 98, 1) 100.2%);
-  border-radius: 50%;
-  position: absolute;
-  right: 500px;
-  top: 400px;
-}
 
 .landing__darkBubble1 {
-  width: 110px;
-  height: 110px;
-  background: black;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 1) 10%, rgb(41, 47, 53) 100%);
-  border-radius: 50%;
-  position: absolute;
-  left: 400px;
-  top: 100px;
-}
-
-.landing__darkBubble2 {
   width: 70px;
   height: 70px;
   background: black;
@@ -84,4 +63,21 @@
   position: absolute;
   right: 100px;
   top: 400px;
+}
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less*/
+@media screen and (max-width: 1100px) {
+
+  .landing__pinkBubble2,
+  .landing__darkBubble1,
+  .landing__pinkBubble1 {
+    display: none;
+  }
 }

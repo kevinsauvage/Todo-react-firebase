@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-
+  width: 100%;
 }
 
 .signIn__title,
@@ -18,7 +18,8 @@
 .signIn__wrapper,
 .signUp__wrapper,
 .reset__wrapper {
-  width: 60vh;
+  width: 90%;
+  max-width: 400px;
 }
 
 .signIn__fromWrapper,

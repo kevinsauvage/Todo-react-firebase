@@ -58,7 +58,7 @@ const SignIn = ({ handleClickSignUp, handleClickForgotPassword }) => {
             />
             <br />
             <SignBtn
-              className="signIn__Btn signOut--btn"
+              className="signIn__Btn reset--btn"
               onClick={handleClickForgotPassword}
               text="Forgot Password?"
             />

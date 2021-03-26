@@ -1,4 +1,3 @@
-import SignBtn from "../Firebase/SignBtn/SignBtn";
 import "./Landing.css";
 
 const Landing = ({ handleClickSignUp }) => {
@@ -14,9 +13,7 @@ const Landing = ({ handleClickSignUp }) => {
       </div>
       <div className="landing__pinkBubble1"></div>
       <div className="landing__pinkBubble2"></div>
-      <div className="landing__pinkBubble3"></div>
       <div className="landing__darkBubble1"></div>
-      <div className="landing__darkBubble2"></div>
     </div>
   );
 };
